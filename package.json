@@ -1,6 +1,6 @@
 {
   "name": "@dapzy/baileys",
-  "type": "module",
+  "type": "commonjs",
   "version": "7.0.0-dapzy",
   "description": "A WebSockets library for interacting with WhatsApp Web APIs",
   "keywords": [
@@ -37,5 +37,9 @@
     "postpublish": "npm run lint:all",
     "precommit": "npm run lint:all && npm run test:all",
     "postcommit": "npm run lint:all && npm run test:all && npm run coverage:report"
+  },
+  "dependencies": {
+    "protobufjs": "^8.8.0",
+    "qrcode-terminal": "^0.12.0"
   }
 }
