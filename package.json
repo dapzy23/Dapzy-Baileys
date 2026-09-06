@@ -1,45 +1,29 @@
 {
   "name": "@dapzy/baileys",
-  "type": "commonjs",
   "version": "7.0.0-dapzy",
-  "description": "A WebSockets library for interacting with WhatsApp Web APIs",
-  "keywords": [
-    "dapzy",
-    "baileys",
-    "whatsapp",
-    "whatsapp-api",
-    "whatsapp-web",
-    "wa-bot",
-    "whatsapp bot"
-  ],
-  "homepage": "https://github.com/dapzy23/Dapzy-Baileys",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:dapzy23/Dapzy-Baileys.git"
-  },
-  "license": "MIT",
-  "author": "dapzy23",
+  "description": "WhatsApp Web API Library - Custom by Dapzy",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": [
-    "lib/**/*",
-    "WAProto/**/*",
-    "engine-requirements.js"
-  ],
-  "scripts": {
-    "build:all": "tsc && typedoc",
-    "build:docs": "typedoc",
-    "build:tcs": "tsc",
-    "changeLog:last": "conventional-changelog -p angular -r 2",
-    "test": "jest --watchAll",
-    "lint": "eslint .",
-    "prepublish": "npm run build:all",
-    "postpublish": "npm run lint:all",
-    "precommit": "npm run lint:all && npm run test:all",
-    "postcommit": "npm run lint:all && npm run test:all && npm run coverage:report"
-  },
-  "devDependencies": {
-    "protobufjs": "^8.8.0",
+  "files": ["lib/**/*", "WAProto/**/*"],
+  "dependencies": {
+    "protobufjs": "^7.2.0",
     "qrcode-terminal": "^0.12.0"
-  }
+  },
+  "peerDependencies": {
+    "jimp": "^1.6.1",
+    "sharp": "*"
+  },
+  "peerDependenciesMeta": {
+    "jimp": { "optional": true },
+    "sharp": { "optional": true }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dapzy23/Dapzy-Baileys"
+  },
+  "author": "dapzy23",
+  "license": "MIT"
 }
