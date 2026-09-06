@@ -38,7 +38,7 @@
     "precommit": "npm run lint:all && npm run test:all",
     "postcommit": "npm run lint:all && npm run test:all && npm run coverage:report"
   },
-  "dependencies": {
+  "devDependencies": {
     "protobufjs": "^8.8.0",
     "qrcode-terminal": "^0.12.0"
   }
